@@ -2,13 +2,14 @@ import {
   Spinner,
 } from 'react-bootstrap';
 import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Context from './Components/Context';
 import MapChart from './Components/MapChart';
-import Home from './Views/Home';
+import Analysis from './Components/Analysis';
+import Methodology from './Components/Methodology';
+import About from './Components/About';
+import Footer from './Components/Footer';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
 } from 'react-router-dom';
 import './App.css';
 
@@ -20,15 +21,11 @@ function App() {
         <Router>
           <Header/>
           
-          <div>
-            {/* Routing */}
-            <Switch>
-              <Route exact path='/'>
-                <Home />
-              </Route>
-            </Switch>
-          </div>
+          <Context/>
           <MapChart/>
+          <Analysis/>
+          <Methodology/>
+          <About/>
 
           <Footer/>
         </Router>
