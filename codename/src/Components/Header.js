@@ -1,7 +1,9 @@
 import React from 'react';
 import {
-  Navbar, 
-  Nav,
+    Navbar, 
+    Nav,
+    Dropdown,
+    DropdownButton,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -13,11 +15,18 @@ function Header() {
       <Navbar.Brand as={Link} to='/'>CodeName</Navbar.Brand>
 
       {/* Links to different webpages */}
-      <Nav className='ml-auto'>
-        <Nav.Link as={Link} to='/'>Home</Nav.Link>
-        <Nav.Link as={Link} to='/'>Methodology</Nav.Link>
-        <Nav.Link as={Link} to='/'>About</Nav.Link>
-      </Nav>
+
+              <DropdownButton
+                  menuAlign="right"
+                  title="Scroll to"
+                  id="dropdown-menu-align-right"
+              >
+                  <Dropdown.Item eventKey="1">Map</Dropdown.Item>
+                  <Dropdown.Item eventKey="2">News</Dropdown.Item>
+                  <Dropdown.Item eventKey="3">Statistics</Dropdown.Item>
+                  <Dropdown.Item eventKey="4">Citations</Dropdown.Item>
+                  </DropdownButton>
+                  
       </Navbar>
     </div>
   );

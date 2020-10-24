@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
-=======
 import {
   Spinner,
 } from 'react-bootstrap';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './Views/Home';
 import {
   BrowserRouter as Router,
@@ -56,7 +46,6 @@ function App() {
       </div>
     );
   }
->>>>>>> master
 }
 
 export default App;
