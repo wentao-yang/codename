@@ -1,11 +1,15 @@
 import React from 'react';
 import {
     Navbar, 
-    Nav,
     Dropdown,
     DropdownButton,
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
+
+const handleSelect = (e) => {
+    console.log(e);
+}
 
 function Header() {
   return (
@@ -14,18 +18,20 @@ function Header() {
       <Navbar bg='dark' variant='dark'>
       <Navbar.Brand as={Link} to='/'>CodeName</Navbar.Brand>
 
-      {/* Links to different webpages */}
+      {/* Drop down for page jumps: bug can't get to right side */}
 
               <DropdownButton
-                  menuAlign="right"
+                  alignRight
                   title="Scroll to"
                   id="dropdown-menu-align-right"
+                  onSelect={handleSelect}
               >
                   <Dropdown.Item eventKey="1">Map</Dropdown.Item>
                   <Dropdown.Item eventKey="2">News</Dropdown.Item>
                   <Dropdown.Item eventKey="3">Statistics</Dropdown.Item>
                   <Dropdown.Item eventKey="4">Citations</Dropdown.Item>
-                  </DropdownButton>
+              </DropdownButton> 
+
                   
       </Navbar>
     </div>
