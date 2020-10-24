@@ -3,6 +3,7 @@ import {
 } from 'react-bootstrap';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
+import MapChart from './Components/MapChart';
 import Home from './Views/Home';
 import {
   BrowserRouter as Router,
@@ -27,6 +28,7 @@ function App() {
               </Route>
             </Switch>
           </div>
+          <MapChart/>
 
           <Footer/>
         </Router>
