@@ -2,14 +2,9 @@ import React from 'react';
 import {
   Spinner,
 } from 'react-bootstrap';
-<<<<<<< HEAD
-import Header from './Components/Header';
-import Footer from './Components/Footer';
-import MapChart from './Components/MapChart';
-=======
+import MapChart from './components/MapChart';
 import Header from './components/Header';
 import Footer from './components/Footer';
->>>>>>> kennyBranch
 import Home from './Views/Home';
 import {
   BrowserRouter as Router,
