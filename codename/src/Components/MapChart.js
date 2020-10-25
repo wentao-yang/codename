@@ -12,12 +12,22 @@ import { ComposableMap,
 import { scaleQuantize } from "d3-scale";
 import { csv } from "d3-fetch";
 
-function MapChart() {
+function MapChart(props) {
   const [fetched, setFetched] = useState(false);
+  const [data, setData] = useState([]);
 
-  // Base map
+  useEffect(() => {
+    // Fetch data
+    csv("/sample.csv").then(counties => {
+      setData(counties);
+      setFetched(true);
+    });
+  }, []);
+
+  // USA county map
   const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json";
 
+  // Color scales
   const colorScale = scaleQuantize()
   .domain([1, 10])
   .range([
@@ -32,18 +42,12 @@ function MapChart() {
     "#782618"
   ]);
 
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    // Data
-    csv("/sample.csv").then(counties => {
-      setData(counties);
-      setFetched(true);
-    });
-  }, []);
   if (fetched) {
     return (
       <div>
+        <br/>
+        <p>Map date: {props.dateValue.getMonth() + 1}/{props.dateValue.getDate()}/{props.dateValue.getFullYear()}</p>
+
         <ComposableMap projection="geoAlbersUsa">
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
@@ -62,7 +66,7 @@ function MapChart() {
         </ComposableMap>
       </div>
     );
-  } else { // Loading screen
+  } else { // Loading icon
     const loadStyle = { // Spinner style
       'top': '50%',
       'left': '50%',

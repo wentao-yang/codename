@@ -15,6 +15,7 @@ import DatePicker from 'react-date-picker'
 import './App.css';
 
 function App() {
+  // Changes date of map
   const [dateValue, onChange] = useState(new Date());
 
   return (
@@ -30,7 +31,7 @@ function App() {
           value={dateValue}
         />
 
-        <MapChart/>
+        <MapChart dateValue={dateValue}/>
         <Analysis/>
         <Methodology/>
         <About/>
