@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Build and Deploy to Cloud Run
+name: Master Build & Deploy
 
 on:
   push:
@@ -38,19 +38,19 @@ jobs:
       with:
         node-version: '12.x'
 
-    - name: Access source directory
-      run: cd codename
-
     - name: Install dependencies
       run: npm install
+      working-directory: codename
 
     - name: Test
       run: npm test
+      working-directory: codename
       env:
         CI: true
 
     - name: Build static assets
       run: npm run build
+      working-directory: codename
 
   setup-build-deploy:
     name: Setup, Build, and Deploy
