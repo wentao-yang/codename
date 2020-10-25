@@ -5,6 +5,7 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY codename .
-RUN npm install --silent
+RUN npm install
+RUN npm run-script build
 
-CMD ["npm", "start"]
+CMD ["npm", "run-script", "serve"]
