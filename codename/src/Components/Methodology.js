@@ -3,6 +3,7 @@ import {
     Jumbotron,
 } from 'react-bootstrap';
 
+
 function Methodology() {
     // CSS for Jumbotron
     const jumboStyle = {
