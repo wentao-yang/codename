@@ -18,7 +18,7 @@ function MapChart(props) {
 
   useEffect(() => {
     // Fetch data
-    csv("/sample_data/Data/" + (props.dateValue.getMonth() + 1) + "-" + props.dateValue.getDate() + "-" + (props.dateValue.getFullYear() - 2000) + ".csv").then(counties => {
+    csv("/data/" + (props.dateValue.getMonth() + 1) + "-" + props.dateValue.getDate() + "-" + (props.dateValue.getFullYear() - 2000) + ".csv").then(counties => {
       setData(counties);
       setFetched(true);
     });
