@@ -6,6 +6,6 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 COPY codename .
 RUN npm install
-RUN npm run-script build
+RUN npm run build
 
-CMD ["npm", "run-script", "serve"]
+CMD ["npm", "run", "serve"]
