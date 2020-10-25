@@ -6,7 +6,7 @@ import {
 function Analysis() {
     // CSS style sheet for certain elements
     const jumboStyle = {
-        'backgroundColor': '#ffffff',
+        'backgroundColor': '#F0F0F0',
     };
 
     return (
