@@ -3,19 +3,19 @@ import {
     Jumbotron,
 } from 'react-bootstrap';
 
-function Home() {
+function Methodology() {
     // CSS style sheet for certain elements
     const jumboStyle = {
-        'backgroundColor': '#ffffff',
+        'backgroundColor': '#F0F0F0',
     };
 
     return (
-        <div className='Home'>
+        <div className='Methodology'>
             <Jumbotron style={jumboStyle}>
-                <h1>Hello World</h1>
+                <h1>Methodology of ML here</h1>
             </Jumbotron>
         </div>
     );
 }
 
-export default Home;
+export default Methodology;

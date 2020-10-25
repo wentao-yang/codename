@@ -1,53 +1,45 @@
-import React from 'react';
-import {
-  Spinner,
-} from 'react-bootstrap';
-import MapChart from './components/MapChart';
-import Header from './components/Header';
-import Footer from './components/Footer';
+
+import React, { useState } from 'react';
 import Home from './Views/Home';
+import Header from './Components/Header';
+import Context from './Components/Context';
+import MapChart from './Components/MapChart';
+import Analysis from './Components/Analysis';
+import Methodology from './Components/Methodology';
+import About from './Components/About';
+import Footer from './Components/Footer';
+
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
 } from 'react-router-dom';
+import DatePicker from 'react-date-picker'
 import './App.css';
 
 function App() {
-  var b = true;
-  if (b) {
-    return (
-      <div className="App">
-        <Router>
-          <Header/>
-          
-          <div>
-            {/* Routing */}
-            <Switch>
-              <Route exact path='/'>
-                <Home />
-              </Route>
-            </Switch>
-          </div>
-          <MapChart/>
+  const [dateValue, onChange] = useState(new Date());
 
-          <Footer/>
-        </Router>
-      </div>
-    );
-  } else { // Loading screen
-    const loadStyle = { // Spinner style
-      'position': 'fixed',
-      'top': '50%',
-      'left': '50%',
-    };
+  return (
+    <div className="App">
+      <Router>
+        <Header/>
+        
+        <Context/>
 
-    return ( // Return loading screen
-      <div style={loadStyle}>
-        <Spinner animation="border" variant="dark" />
-      </div>
-    );
-  }
+        <p>Enter a date between 1/22/20 and 11/22/20 for the map{"\n"}</p>
+        <DatePicker
+          onChange={onChange}
+          value={dateValue}
+        />
+
+        <MapChart/>
+        <Analysis/>
+        <Methodology/>
+        <About/>
+
+        <Footer/>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
