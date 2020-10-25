@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import Home from './Views/Home';
 import Header from './Components/Header';
 import Context from './Components/Context';
 import MapChart from './Components/MapChart';
