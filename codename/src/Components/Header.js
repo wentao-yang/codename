@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Navbar, 
     Dropdown,
@@ -7,12 +7,16 @@ import {
 import { Link } from 'react-router-dom';
 
 
-const handleSelect = (e) => {
-    console.log(e);
-}
+
 
 function Header() {
-  return (
+    const [select, setSelect] = useState(false);
+
+
+    const handleSelect = () => setSelect
+        (!select);
+
+    return (
     <div className='Header'>
       {/* App Name on the far left */}
       <Navbar bg='dark' variant='dark'>
@@ -20,16 +24,17 @@ function Header() {
 
       {/* Drop down for page jumps: bug can't get to right side */}
 
-              <DropdownButton
-                  alignRight
-                  title="Scroll to"
+                <DropdownButton
+                  variant="dark"
+                    title="Scroll to"
+                    size="lg"
                   id="dropdown-menu-align-right"
                   onSelect={handleSelect}
-              >
-                  <Dropdown.Item eventKey="1">Map</Dropdown.Item>
-                  <Dropdown.Item eventKey="2">News</Dropdown.Item>
-                  <Dropdown.Item eventKey="3">Statistics</Dropdown.Item>
-                  <Dropdown.Item eventKey="4">Citations</Dropdown.Item>
+                >
+                    <Dropdown.Item eventKey="1" onSelect={handleSelect} >Map</Dropdown.Item>
+                    <Dropdown.Item eventKey="2" onSelect={handleSelect} >News</Dropdown.Item>
+                    <Dropdown.Item eventKey="3" onSelect={handleSelect} >Statistics</Dropdown.Item>
+                    <Dropdown.Item eventKey="4" onSelect={handleSelect} >Citations</Dropdown.Item>
               </DropdownButton> 
 
                   
