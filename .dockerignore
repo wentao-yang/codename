@@ -1,0 +1,4 @@
+codename/node_modules
+codename/build
+.dockerignore
+Dockerfile
