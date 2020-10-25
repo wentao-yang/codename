@@ -12,7 +12,7 @@ function Context() {
     return (
         <div className='Context'>
             <Jumbotron style={jumboStyle}>
-                <h1>Background Context Here</h1>
+                <h1>It's October 25, 2020, and COVID-19 cases are on the rise again.</h1>
             </Jumbotron>
         </div>
     );

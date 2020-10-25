@@ -25,7 +25,7 @@ function App() {
         
         <Context/>
 
-        <p>Enter a date between 1/22/20 and 11/22/20 for the map{"\n"}</p>
+        <p>Enter a date between 1/22/20 and 11/22/20 to view past, present, and future COVID-19 Hotspots:{"\n"}</p>
         <DatePicker
           onChange={onChange}
           value={dateValue}
@@ -33,6 +33,7 @@ function App() {
 
         <MapChart dateValue={dateValue}/>
         <Analysis/>
+        <br/>
         <Methodology/>
         <About/>
 

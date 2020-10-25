@@ -1,19 +1,51 @@
 import React from 'react';
 import {
-    Jumbotron,
+    Carousel,
 } from 'react-bootstrap';
 
 function Analysis() {
-    // CSS for Jumbotron
-    const jumboStyle = {
-        'backgroundColor': '#F0F0F0',
-    };
-
     return (
         <div className='Analysis'>
-            <Jumbotron style={jumboStyle}>
-                <h1>Analysis of data here</h1>
-            </Jumbotron>
+            <Carousel>
+                <Carousel.Item>
+                    <img
+						className="d-block w-100"
+						src="carousel.png"
+						alt="First slide"
+					/>
+                    <Carousel.Caption>
+                    <h1>FIRST SLIDE STATISTIC</h1>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    <img
+						className="d-block w-100"
+						src="carousel.png"
+						alt="Second slide"
+					/>
+                    <Carousel.Caption>
+                    <h1>SECOND SLIDE STATISTIC</h1>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+                <Carousel.Item>
+                    <img
+						className="d-block w-100"
+						src="carousel.png"
+						alt="Third slide"
+					/>
+                    <Carousel.Caption>
+                    <h1>THIRD SLIDE STATISTIC</h1>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+                    <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
         </div>
     );
 }
