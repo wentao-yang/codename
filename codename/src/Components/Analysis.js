@@ -15,7 +15,7 @@ function Analysis() {
 					/>
                     <Carousel.Caption>
                     <h1>FIRST SLIDE STATISTIC</h1>
-                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
