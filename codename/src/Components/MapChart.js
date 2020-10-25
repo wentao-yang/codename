@@ -18,11 +18,11 @@ function MapChart(props) {
 
   useEffect(() => {
     // Fetch data
-    csv("/sample.csv").then(counties => {
+    csv("/sample_data/Data/" + (props.dateValue.getMonth() + 1) + "-" + props.dateValue.getDate() + "-" + (props.dateValue.getFullYear() - 2000) + ".csv").then(counties => {
       setData(counties);
       setFetched(true);
     });
-  }, []);
+  }, [props.dateValue]);
 
   // USA county map
   const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json";
@@ -45,9 +45,6 @@ function MapChart(props) {
   if (fetched) {
     return (
       <div>
-        <br/>
-        <p>Map date: {props.dateValue.getMonth() + 1}/{props.dateValue.getDate()}/{props.dateValue.getFullYear()}</p>
-
         <ComposableMap projection="geoAlbersUsa">
           <Geographies geography={geoUrl}>
             {({ geographies }) =>

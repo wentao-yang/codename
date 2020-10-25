@@ -1,18 +1,19 @@
 import React from 'react';
 import {
     Jumbotron,
+    Button,
 } from 'react-bootstrap';
 
 function About() {
     
     const jumboStyle = {
-        'backgroundColor': '#F0F0F0',
+        'backgroundColor': '#D0D0D0',
     };
 
     return (
         <div className='About'>  
             <Jumbotron style={jumboStyle}>
-                <h1>About section</h1>
+                <Button variant="primary" size="lg" block href='https://github.com/wentao-yang/codename'>GitHub Repo</Button>{' '}
             </Jumbotron>
         </div>
     );
