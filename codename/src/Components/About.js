@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 
 function About() {
-    // CSS style sheet for certain elements
+    // CSS for Jumbotron
     const jumboStyle = {
         'backgroundColor': '#F0F0F0',
     };
