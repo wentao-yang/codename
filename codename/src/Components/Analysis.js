@@ -14,9 +14,8 @@ function Analysis() {
 						alt="First slide"
 					/>
                     <Carousel.Caption>
-                    <h1>FIRST SLIDE STATISTIC</h1>
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h2>The map is mainly blank because most places are similar in terms of the rate of change or corona virus. The counties that are displayed are the main hot spots where change is rampantly increasing.</h2>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -27,9 +26,8 @@ function Analysis() {
 						alt="Second slide"
 					/>
                     <Carousel.Caption>
-                    <h1>SECOND SLIDE STATISTIC</h1>
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2>The Mid-West/Central region of the US seems to be most likely to increase in corona virus cases over the next month.</h2>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                     </Carousel.Caption>
                 </Carousel.Item>
 
@@ -40,9 +38,8 @@ function Analysis() {
 						alt="Third slide"
 					/>
                     <Carousel.Caption>
-                    <h1>THIRD SLIDE STATISTIC</h1>
-                    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-                    <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <h2>Existing hotspots in the nation are not predicted to go down in number of cases since they all depict a positive rate of change.</h2>
+                    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
