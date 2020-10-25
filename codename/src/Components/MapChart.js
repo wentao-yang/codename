@@ -64,14 +64,15 @@ function MapChart() {
     );
   } else { // Loading screen
     const loadStyle = { // Spinner style
-      'position': 'fixed',
       'top': '50%',
       'left': '50%',
     };
 
     return ( // Return loading screen
       <div style={loadStyle}>
+        <br/><br/><br/><br/>
         <Spinner animation="border" variant="dark" />
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       </div>
     );
   }
